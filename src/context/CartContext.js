@@ -63,7 +63,7 @@ export const CartProvider = ({ children }) => {
             })
             const cartData = (await res.json()).cart
             if (cartData.find(({ _id }) => id === _id).qty === 0) delCartItem(id)
-            else setCart(cartData)
+            else setCart(cartData)"
         } catch (e) {
             console.error("could not change quantity", e);
         }
