@@ -2,6 +2,7 @@
   "name": "aud.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rash-a.github.io/aud.io/",
   "dependencies": {
     "dayjs": "^1.11.7",
     "jwt-decode": "^3.1.2",
@@ -40,6 +41,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
+    "gh-pages": "^5.0.0"
   }
 }
