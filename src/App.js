@@ -1,43 +1,27 @@
 import "./App.css";
-import logo from "./logo.png";
+import Mockman from "mockman-js"
+// import { useContext } from "react";
+import { Routes, Route } from "react-router-dom";
+// import { AudContext } from "./context/AudContext";
+import { Landing } from "./pages/LandingPage";
+import { Account } from "./pages/Account";
+import { ProductDetailPage } from "./pages/ProductDetailPage";
+import { Cart } from "./pages/Cart";
 
 function App() {
+  // const { data } = useContext(AudContext)
+  // console.log(data);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/mockman" element={<Mockman />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/products/:productID" element={<ProductDetailPage />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </div>
   );
 }
-
 export default App;
